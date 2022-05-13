@@ -1,0 +1,22 @@
+{
+  "name": "Copy to Filet",
+  "version": "0.1",
+  "description": "Copy to File",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_title": "Copy to File",
+    "default_popup": "popup.html" 
+  },
+  "permissions": [
+    "tabs",
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ]
+ }
