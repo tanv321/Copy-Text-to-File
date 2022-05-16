@@ -1,5 +1,5 @@
 {
-  "name": "Copy to Filet",
+  "name": "Copy to File",
   "version": "0.1",
   "description": "Copy to File",
   "manifest_version": 2,
@@ -8,13 +8,14 @@
     "default_popup": "popup.html" 
   },
   "permissions": [
+    "downloads",
     "tabs",
     "<all_urls>"
   ],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content.js"],
+      "js": ["content.js", "popup.js", "popup.html"],
       "run_at": "document_start",
       "all_frames": true
     }
